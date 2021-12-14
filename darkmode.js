@@ -1,12 +1,12 @@
 const drkBtn= document.querySelector('.dark-button')
 
-if(localStorage.getItem("theme") == null){
+// if(localStorage.getItem("theme") == null){
 
 
-localStorage.setItem("theme","light");}
+// localStorage.setItem("theme","light");}
 
 
-let localData =localStorage.getItem("theme");
+// let localData =localStorage.getItem("theme");
 
 if(localData == "light"){
     drkBtn.innerHTML = "D";
@@ -24,8 +24,9 @@ function toggleDarkMode(){
    element.classList.toggle("dark"); 
    if(drkBtn.innerHTML==="D"){
    drkBtn.innerHTML = "L";
-   localStorage.setItem("theme","dark");
+//    localStorage.setItem("theme","dark");
 }else{drkBtn.innerHTML="D";
-localStorage.setItem("theme","light");}
+// localStorage.setItem("theme","light");
+}
 
 }
