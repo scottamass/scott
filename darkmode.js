@@ -1,32 +1,22 @@
 const drkBtn= document.querySelector('.dark-button')
 
-// if(localStorage.getItem("theme") == null){
-
-
-// localStorage.setItem("theme","light");}
-
-
-// let localData =localStorage.getItem("theme");
-
-if(localData == "light"){
-    drkBtn.innerHTML = "D";
-    document.body.classList.remove("dark")
-}
-else if(localData == "dark"){
-    drkBtn.innerHTML="L";
-    document.body.classList.add("dark");
-
-
-}
 
 function toggleDarkMode(){
-   var element =document.body;
-   element.classList.toggle("dark"); 
-   if(drkBtn.innerHTML==="D"){
+ 
+   if(document.documentElement.classList.contains("light")){
    drkBtn.innerHTML = "L";
-//    localStorage.setItem("theme","dark");
-}else{drkBtn.innerHTML="D";
-// localStorage.setItem("theme","light");
+   document.documentElement.classList.remove("light")
+   document.documentElement.classList.add("dark")
+}else if(document.documentElement.classList.contains("dark")){
+    drkBtn.innerHTML = "D";
+    document.documentElement.classList.remove("dark")
+    document.documentElement.classList.add("light")    
+}else{
+    if(window?.matchMedia('(prefers-color-scheme:dark)').matches){
+        document.documentElement.classList.add('light')
+    }else {document.documentElement.classList.add('dark')
+
+    }
 }
 
 }

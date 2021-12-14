@@ -1,47 +1,29 @@
-:root{
+:root, :root.light{
     --primbg : #ffe6e6;
     --secndry:#f1e1e1;
-    --dark: #1a0000;
-    --secndry-dark:#000000;
     --drk-btn: purple;
-    --os:white;
-
     --txt: black;
-    --txt-dark: white;
+    
 }
-
-.dark{
+@media(prefers-color-scheme:dark){
+  :root{
+    --primbg : #1a0000;
+    --secndry:#000000;
+    --txt: white;
+    --drk-btn:yellow;
+}}
+:root.dark{
   --primbg : #1a0000;
   --secndry:#000000;
   --txt: white;
   --drk-btn:yellow;
 }
 
-@media(prefers-color-scheme:dark){
-  :root{
-  --primbg : var(--dark);
-  --secndry:var(--secndry-dark);
-  
-  --drk-btn: yellow;
-  --os:white;
 
-  --txt: var(--txt-dark);
-  
-}}
 
-@media(prefers-color-scheme:light){
-  :root{
-    --primbg : #ffe6e6;
-    --secndry:#f1e1e1;
-    --dark: #1a0000;
-    --secndry-dark:#000000;
-    --drk-btn: purple;
-    --os:white;
-  
-    --txt: black;
-    --txt-dark: white;
-  }
-}
+
+
+
 
 .footer{padding-top: 2em;}
 
