@@ -19,16 +19,23 @@
 
 @media(prefers-color-scheme:dark){
   :root{
-  --primbg : var(--dark);
-  --secndry:var(--secndry-dark);
+    --primbg : #1a0000;
+    --secndry:#000000;
+    --dark: #1a0000;
+    --secndry-dark:#000000;
+    --drk-btn: yellow;
+    --os:white;
   
-  --drk-btn: yellow;
-  --os:white;
+    --txt: white;
+    --txt-dark: white;}
+    .dark{
+      --primbg : #ffe6e6;
+      --secndry:#f1e1e1;
+      --txt: black;
+      --drk-btn:purple;
+    }
 
-  --txt: var(--txt-dark);
-  
-}}
-
+  }
 @media(prefers-color-scheme:light){
   :root{
     --primbg : #ffe6e6;
@@ -39,9 +46,23 @@
     --os:white;
   
     --txt: black;
+    --txt-dark: white;}
+  .dark{
+    --primbg : #1a0000;
+    --secndry:#000000;
+    --dark: #1a0000;
+    --secndry-dark:#000000;
+    --drk-btn: yellow;
+    --os:white;
+  
+    --txt: white;
     --txt-dark: white;
+    }
   }
-}
+
+  
+
+
 
 .footer{padding-top: 2em;}
 
@@ -203,6 +224,42 @@ border: 2px solid red;
   margin-top: 2em;
 }
 
+.card{
+  
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+}
+
+.gridcontainer{
+  display: grid;
+  grid-template-areas: 
+  "html css" "js python" "flask bootstrap";
+  grid-template-columns: 50% 50%;
+}
+
+.grid-html{
+  display: block;
+  grid-area:html;
+  
+  
+}
+
+.grid-css{
+  display: block;
+  grid-area:css;
+  
+}
+.grid-js{
+  display: block;
+  grid-area: js;
+}
+
+.grid-python{
+  grid-area: python;
+}
 @media screen and (min-width:720px)  {
   
 
@@ -225,6 +282,15 @@ border: 2px solid red;
 
 #headderPic{
   margin-top: 1em;
+}
+
+.gridcontainer{
+  display: grid;
+  grid-template-areas: 
+  
+  "html css js"
+  "python flask bootstrap";
+  grid-template-columns: 33% 33% 33%;
 }
 
 }

@@ -22,10 +22,11 @@ else if(localData == "dark"){
 function toggleDarkMode(){
    var element =document.body;
    element.classList.toggle("dark"); 
-   if(drkBtn.innerHTML==="D"){
-   drkBtn.innerHTML = "L";
-   localStorage.setItem("theme","dark");
-}else{drkBtn.innerHTML="D";
-localStorage.setItem("theme","light");}
+   if   (drkBtn.innerHTML==="D"){
+        drkBtn.innerHTML = "L";
+        localStorage.setItem("theme","dark");}
+   else
+        {drkBtn.innerHTML="D";
+        localStorage.setItem("theme","light");}
 
 }
